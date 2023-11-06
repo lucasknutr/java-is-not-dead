@@ -17,15 +17,14 @@ public class Main {
     public static String getName() {
         System.out.println("What is your name?");
         Scanner scanner = new Scanner(System.in);
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     // MAIN APP
     public static void main(String[] args) {
-        int a = 1;
-        int b = 2;
-        System.out.println(Add(a, b));
-        getRGBValues();
-        System.out.println("Hello, " + getName());
+        Cake bombocado = new Cake("Bombocado", 22, 11, true);
+        System.out.println(bombocado.name + ": " + (bombocado.isAvailable + ""));
+        bombocado.isAvailable = false;
+        System.out.println(bombocado.name + ": " + (bombocado.isAvailable + ""));
     }
 }
