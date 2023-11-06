@@ -22,9 +22,9 @@ public class Main {
 
     // MAIN APP
     public static void main(String[] args) {
-        Cake bombocado = new Cake("Bombocado", 22, 11, true);
-        System.out.println(bombocado.name + ": " + (bombocado.isAvailable + ""));
-        bombocado.isAvailable = false;
-        System.out.println(bombocado.name + ": " + (bombocado.isAvailable + ""));
+        Cake bombocado = new Cake("Bombocado", 22, 12, true);
+        Cake boloDeCenoura = new Cake("Cenoura", 20, 11, true);
+        Cake boloDeChocolate = new Cake("Chocolate", 18, 10, true);
+
     }
 }
