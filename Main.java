@@ -1,20 +1,10 @@
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static int Add(int a, int b) {
-        return a + b;
-    }
-    public static double generateRandom () { return Math.floor(Math.random() * 255.999); }
-    public static void getRGBValues() {
-        double r = generateRandom();
-        double g = generateRandom();
-        double b = generateRandom();
-        System.out.println("r: " + r + " g: " + g + " b: " + b);
-    }
-
-    private static List<Cake> cakes = new ArrayList<>();
+    private static final List<Cake> cakes = new ArrayList<>();
 
     public static Cake getCakeByName(String name) {
         for (Cake cake : cakes) {
@@ -22,7 +12,7 @@ public class Main {
                 return cake;
             }
         }
-        return null;
+        throw new NoSuchElementException("There is no cake with this name.");
     }
 
     public static String compareCakePrices(Cake firstCake, Cake secondCake) {
